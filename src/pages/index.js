@@ -11,8 +11,8 @@ export default function Home({ data }) {
     <Layout>
       <Seo title='Home' />
       {posts.map((post) => (
-        <Link to={post.uri}>
-          <h2 key={post.slug}>{post.title}</h2>
+        <Link key={post.slug} to={post.uri}>
+          <h2>{post.title}</h2>
           <p>{post.date}</p>
           <div>{parse(post.excerpt)}</div>
         </Link>
